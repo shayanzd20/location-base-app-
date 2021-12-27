@@ -237,7 +237,7 @@ function sendPushNotification(push_id,title,msg) {
         headers: {
             "Content-Type": "application/json",
             "Accept": "application/json",
-            "Authorization": "Token 9546ab863515f2b6b75b7b5d0778242fe99c3792",
+            "Authorization": process.env.TOKEN,
             'Content-Length': Buffer.byteLength(post_data)
         }
     };
@@ -293,7 +293,7 @@ function asyncSendPushNotification(push_id,title,msg) {
         headers: {
             "Content-Type": "application/json",
             "Accept": "application/json",
-            "Authorization": "Token 9546ab863515f2b6b75b7b5d0778242fe99c3792",
+            "Authorization": process.env.TOKEN,
             'Content-Length': Buffer.byteLength(post_data)
         }
     };

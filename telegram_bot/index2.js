@@ -7,7 +7,7 @@ const keyboard = Markup.inlineKeyboard([
   Markup.callbackButton('Delete', 'delete')
 ])
 
-const bot = new Telegraf("800472780:AAELQ6Lq7tre1Awmkt73UIiT0TwdmSfw6is")
+const bot = new Telegraf(process.env.BOT_TOKEN)
 bot.start((ctx) => ctx.reply('Hello'))
 bot.help((ctx) => ctx.reply('Help message'))
 bot.on('message', (ctx) => ctx.telegram.sendCopy(ctx.from.id, ctx.message, Extra.markup(keyboard)))
